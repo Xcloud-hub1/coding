@@ -1,6 +1,6 @@
 module github.com/kingparks/windsurf-vip
 
-go 1.22.0
+go 1.18
 
 require (
 	github.com/astaxie/beego v1.12.3
