@@ -148,7 +148,7 @@ func Run() (productSelected string, modelIndexSelected int) {
 	periodIndex := 1
 	if expTime.Before(time.Now()) {
 		fmt.Printf(defaultColor, Trr.Tr("选择有效期："))
-		jbPeriod := []string{"1" + Trr.Tr("年(购买)"), "2" + Trr.Tr("小时(免费)")}
+		jbPeriod := []string{"1" + Trr.Tr("年(购买)"), "24" + Trr.Tr("小时(免费)")}
 		for i, v := range jbPeriod {
 			fmt.Printf(hGreen, fmt.Sprintf("%d. %s\t", i+1, v))
 		}
@@ -164,7 +164,7 @@ func Run() (productSelected string, modelIndexSelected int) {
 
 		if periodIndex == 2 {
 			fmt.Printf(green, Trr.Tr("授权成功！使用过程请不要关闭此窗口"))
-			countDown(2 * 60 * 60)
+			countDown(24 * 60 * 60)
 			return
 		}
 
